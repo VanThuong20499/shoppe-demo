@@ -790,7 +790,7 @@
     border-radius: 2px;
     cursor: pointer;
     position: relative;
-    z-index: 3;
+    z-index: 1;
 }
 
 .home-filter-select-icon{
