@@ -878,6 +878,11 @@
         </div>
     </div>
     <script>
+        var historySearch = document.querySelector('.header__search-history')
+        historySearch.onmousedown = function(e){
+            e.preventDefault();
+            console.log(e.target)
+        }
         function showHeartLike(e){
             e.classList.toggle('home-product-item__action-heart-liked')
         }
