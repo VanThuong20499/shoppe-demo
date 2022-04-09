@@ -1,0 +1,235 @@
+/* Mobile & tablet */
+@media (max-width: 1023px){
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+
+    .header{
+        height: auto;
+    }
+
+    .header-with-search{
+        height: 68px;
+    }
+
+    .header__cart-list{
+        position: fixed;
+        top: 68px;
+        right: 0;
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2);
+    }
+
+    .header__cart-list::after{
+        display: none;
+    }
+
+    .header__cart-list::before{
+        top: -21px;
+        height: 30px;
+    }
+
+    .header__sort-bar{
+        display: block;
+        position: fixed;
+        top: 68px;
+        background-color: #fff;
+        left: 0;
+        right: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        height: 46px;
+        padding-left: 0;
+        justify-content: center;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .header__sort-item{
+        display: block;
+        width: calc(644px / 4);
+        text-align: center;
+        position: relative;
+    }
+
+    .header__sort-item-link{
+        text-decoration: none;
+        color: #333;
+        font-size: 1.4rem;
+        display: block;
+        line-height: 46px;
+    }
+
+    .header__sort-item::before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 60%;
+        width: 1px;
+        background-color: #e5e5e5;
+    }
+    .header__sort-item:last-child:after{
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 60%;
+        width: 1px;
+        background-color: #e5e5e5;
+    }
+
+    .header__sort-item-link-active{
+        color: var(--primamy-color);
+    }
+
+    .container{
+        margin-top: calc(46px + 68px);
+    }
+
+    .home-product{
+        margin-top: 16px;
+    }
+
+    .footer{
+        padding-left: 16px;
+    }
+
+    .footer-list{
+        margin-bottom: 20px;
+    }
+}
+
+/*tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+
+    .header__cart-notice{
+        right: 6px;
+    }
+}
+
+/* mobile */
+
+@media (max-width: 739px){
+    .hide-on-mobile{
+        display: none;
+    }
+
+    .header__logo{
+        display: block;
+        width: 164px;
+    }
+
+    .header__cart{
+        width: unset;
+    }
+
+    .header__cart-notice{
+        right: -13px;
+    }
+
+    .header-with-search{
+        justify-content: space-around;
+    }
+
+    .header__search-mobile{
+        display: block;
+        cursor: pointer;
+    }
+
+    .header__search-mobile-icon{
+        font-size: 2.6rem;
+        color: #fff;
+    }
+
+    .header__logo-link{
+        display: block;
+        line-height: 0;
+    }
+
+    .header__search{
+        position: absolute;
+        top: 68px;
+        z-index: 7;
+        left: 0;
+        right: 0;
+        margin-left: 12px;
+        margin-right: 12px;
+        animation: headerSearch linear 0.5s forwards;
+    }
+
+    @keyframes headerSearch {
+        0%{
+            top: 41px;
+            opacity: 0;
+        }
+        100%{
+            top: 68px;
+            opacity: 1;
+        }
+    }
+
+    .pagination-item{
+        margin: 0;
+    }
+
+    .container{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .mobile-category{
+        display: block;
+        margin-top: 20px;
+    }
+
+    .mobile-category__list{
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .mobile-category__list::-webkit-scrollbar{
+        display: none;
+    }
+
+    .mobile-category__item{
+
+    }
+
+    .mobile-category__item:nth-of-type(3n + 1) .mobile-category__item-link{
+        background-color: cadetblue;
+    }
+
+    .mobile-category__item:nth-of-type(3n + 2) .mobile-category__item-link{
+        background-color: violet;
+    }
+
+    .mobile-category__item:nth-of-type(3n + 3) .mobile-category__item-link{
+        background-color: tomato;
+    }
+
+    .mobile-category__item-link{
+        text-decoration: none;
+        display: block;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        text-align: center;
+        padding: 8px 15px;
+        margin: 0 10px;
+        min-width: 100px;
+        border-radius: 8px;
+        color: #fff;
+    }
+}
